@@ -137,7 +137,7 @@ def compute_metrics(eval_pred):
 
 # === 8. Training arguments ===
 training_args = Seq2SeqTrainingArguments(
-    output_dir=OUTPUT_DIR,
+    output_dir=OUTPUT_DIR, #l
     eval_strategy="epoch",
     logging_strategy="steps",
     save_strategy="epoch",

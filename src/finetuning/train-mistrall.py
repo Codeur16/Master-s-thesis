@@ -11,13 +11,13 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 from sklearn.metrics import f1_score
 # === 1. Config ===
-BASE_MODEL_NAME = "7b-instruct-v0.1-hf/1"
+BASE_MODEL_NAME = "/kaggle/input/mistral/pytorch/7b-instruct-v0.1-hf/1"
 OUTPUT_DIR = "./finetuned-mistral-nli/"
-DATASET_FILE = "data/balanced_10k_dataset_v2_enriched.csv"
+DATASET_FILE = "/home/ingenieur/Desktop/Memoire de master2/Experimantations-on-multi_nli/data/balanced_10k_dataset_v2_enriched.csv"
 
 MAX_INPUT_LENGTH = 256
 MAX_TARGET_LENGTH = 8
-BATCH_SIZE = 4 
+BATCH_SIZE = 4  # réduit pour Kaggle GPU
 EPOCHS = 3
 USE_KBIT = True
 
